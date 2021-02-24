@@ -3,13 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */; };
+		7C3B62E125E56D51001D05B8 /* DB1.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7C3B62E025E56D51001D05B8 /* DB1.zip */; };
+		7C3B62E625E56D6C001D05B8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */; };
+		7C3B62FE25E5897F001D05B8 /* 1_2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */; };
+		7C3B630625E58A14001D05B8 /* 2_3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */; };
 		7C40C09F25E1270500D51386 /* Progression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40C09525E1270500D51386 /* Progression.framework */; };
-		7C40C0A425E1270500D51386 /* ProgressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40C0A325E1270500D51386 /* ProgressionTests.swift */; };
 		7C40C0A625E1270500D51386 /* Progression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C40C09825E1270500D51386 /* Progression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C40C0B925E127B700D51386 /* PMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40C0B825E127B700D51386 /* PMigrationManager.swift */; };
+		7CB0AE2825E2AEF700DFDE03 /* PMigrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2725E2AEF700DFDE03 /* PMigrationStep.swift */; };
+		7CB0AE2C25E2AF0C00DFDE03 /* PDatabaseVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */; };
+		7CB0AE3525E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3425E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift */; };
+		7CB0AE3925E2D10B00DFDE03 /* NSManagedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3825E2D10B00DFDE03 /* NSManagedObjectModel.swift */; };
+		7CB0AE4025E2D71900DFDE03 /* PMigrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3F25E2D71900DFDE03 /* PMigrationError.swift */; };
+		7CB0AE4525E2DFD100DFDE03 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE4425E2DFD100DFDE03 /* FileManager.swift */; };
+		7CB0AE4C25E2E47500DFDE03 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB0AE4B25E2E47500DFDE03 /* Zip */; };
+		7CB0AE6625E2F83900DFDE03 /* DBVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +36,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C3B62CF25E56117001D05B8 /* MM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MM.xcdatamodel; sourceTree = "<group>"; };
+		7C3B62E025E56D51001D05B8 /* DB1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DB1.zip; sourceTree = "<group>"; };
+		7C3B62E925E56DAE001D05B8 /* MM2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MM2.xcdatamodel; sourceTree = "<group>"; };
+		7C3B62F225E58100001D05B8 /* MM3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MM3.xcdatamodel; sourceTree = "<group>"; };
+		7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = 1_2.xcmappingmodel; sourceTree = "<group>"; };
+		7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = 2_3.xcmappingmodel; sourceTree = "<group>"; };
 		7C40C09525E1270500D51386 /* Progression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Progression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40C09825E1270500D51386 /* Progression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Progression.h; sourceTree = "<group>"; };
 		7C40C09925E1270500D51386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C40C09E25E1270500D51386 /* ProgressionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40C0A325E1270500D51386 /* ProgressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionTests.swift; sourceTree = "<group>"; };
 		7C40C0A525E1270500D51386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C40C0B825E127B700D51386 /* PMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationManager.swift; sourceTree = "<group>"; };
+		7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTests.swift; sourceTree = "<group>"; };
+		7CB0AE2725E2AEF700DFDE03 /* PMigrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationStep.swift; sourceTree = "<group>"; };
+		7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDatabaseVersion.swift; sourceTree = "<group>"; };
+		7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVersion.swift; sourceTree = "<group>"; };
+		7CB0AE3425E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentStoreCoordinator.swift; sourceTree = "<group>"; };
+		7CB0AE3825E2D10B00DFDE03 /* NSManagedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectModel.swift; sourceTree = "<group>"; };
+		7CB0AE3F25E2D71900DFDE03 /* PMigrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationError.swift; sourceTree = "<group>"; };
+		7CB0AE4425E2DFD100DFDE03 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB0AE4C25E2E47500DFDE03 /* Zip in Frameworks */,
 				7C40C09F25E1270500D51386 /* Progression.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +100,9 @@
 		7C40C09725E1270500D51386 /* Progression */ = {
 			isa = PBXGroup;
 			children = (
+				7CB0AE3C25E2D48700DFDE03 /* Common */,
+				7CB0AE3325E2B57F00DFDE03 /* Extensions */,
+				7C40C0B725E127A100D51386 /* Classes */,
 				7C40C09825E1270500D51386 /* Progression.h */,
 				7C40C09925E1270500D51386 /* Info.plist */,
 			);
@@ -80,10 +112,76 @@
 		7C40C0A225E1270500D51386 /* ProgressionTests */ = {
 			isa = PBXGroup;
 			children = (
+				7CB0AE4325E2DFC900DFDE03 /* Common */,
+				7C40C0B125E1272D00D51386 /* Resources */,
 				7C40C0A325E1270500D51386 /* ProgressionTests.swift */,
 				7C40C0A525E1270500D51386 /* Info.plist */,
+				7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */,
 			);
 			path = ProgressionTests;
+			sourceTree = "<group>";
+		};
+		7C40C0B125E1272D00D51386 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0AE5025E2E9F400DFDE03 /* MappingModels */,
+				7CB0AE1E25E2AD3D00DFDE03 /* ZippedDBs */,
+				7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */,
+				7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C40C0B725E127A100D51386 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7C40C0B825E127B700D51386 /* PMigrationManager.swift */,
+				7CB0AE2725E2AEF700DFDE03 /* PMigrationStep.swift */,
+				7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CB0AE1E25E2AD3D00DFDE03 /* ZippedDBs */ = {
+			isa = PBXGroup;
+			children = (
+				7C3B62E025E56D51001D05B8 /* DB1.zip */,
+			);
+			path = ZippedDBs;
+			sourceTree = "<group>";
+		};
+		7CB0AE3325E2B57F00DFDE03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0AE3425E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift */,
+				7CB0AE3825E2D10B00DFDE03 /* NSManagedObjectModel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7CB0AE3C25E2D48700DFDE03 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0AE3F25E2D71900DFDE03 /* PMigrationError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7CB0AE4325E2DFC900DFDE03 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0AE4425E2DFD100DFDE03 /* FileManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7CB0AE5025E2E9F400DFDE03 /* MappingModels */ = {
+			isa = PBXGroup;
+			children = (
+				7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */,
+				7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */,
+			);
+			path = MappingModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +230,9 @@
 				7C40C0A125E1270500D51386 /* PBXTargetDependency */,
 			);
 			name = ProgressionTests;
+			packageProductDependencies = (
+				7CB0AE4B25E2E47500DFDE03 /* Zip */,
+			);
 			productName = ProgressionTests;
 			productReference = 7C40C09E25E1270500D51386 /* ProgressionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -147,9 +248,11 @@
 				TargetAttributes = {
 					7C40C09425E1270500D51386 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					7C40C09D25E1270500D51386 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -162,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 7C40C08B25E1270500D51386;
+			packageReferences = (
+				7CB0AE4A25E2E47500DFDE03 /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			productRefGroup = 7C40C09625E1270500D51386 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3B62E125E56D51001D05B8 /* DB1.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB0AE3525E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift in Sources */,
+				7CB0AE2C25E2AF0C00DFDE03 /* PDatabaseVersion.swift in Sources */,
+				7C40C0B925E127B700D51386 /* PMigrationManager.swift in Sources */,
+				7CB0AE2825E2AEF700DFDE03 /* PMigrationStep.swift in Sources */,
+				7CB0AE4025E2D71900DFDE03 /* PMigrationError.swift in Sources */,
+				7CB0AE3925E2D10B00DFDE03 /* NSManagedObjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C40C0A425E1270500D51386 /* ProgressionTests.swift in Sources */,
+				7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */,
+				7CB0AE6625E2F83900DFDE03 /* DBVersion.swift in Sources */,
+				7C3B62FE25E5897F001D05B8 /* 1_2.xcmappingmodel in Sources */,
+				7C3B62E625E56D6C001D05B8 /* MigrationTests.swift in Sources */,
+				7C3B630625E58A14001D05B8 /* 2_3.xcmappingmodel in Sources */,
+				7CB0AE4525E2DFD100DFDE03 /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +459,7 @@
 		7C40C0AA25E1270500D51386 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +475,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.bdrt.Progression;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +485,7 @@
 		7C40C0AB25E1270500D51386 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.bdrt.Progression;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +510,8 @@
 		7C40C0AD25E1270500D51386 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProgressionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.bdrt.ProgressionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -404,6 +530,8 @@
 		7C40C0AE25E1270500D51386 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProgressionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +577,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7CB0AE4A25E2E47500DFDE03 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7CB0AE4B25E2E47500DFDE03 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CB0AE4A25E2E47500DFDE03 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C3B62F225E58100001D05B8 /* MM3.xcdatamodel */,
+				7C3B62E925E56DAE001D05B8 /* MM2.xcdatamodel */,
+				7C3B62CF25E56117001D05B8 /* MM.xcdatamodel */,
+			);
+			currentVersion = 7C3B62F225E58100001D05B8 /* MM3.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C40C08C25E1270500D51386 /* Project object */;
 }
