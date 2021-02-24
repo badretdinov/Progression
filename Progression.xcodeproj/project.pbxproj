@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C22CE7425E6DB9200689817 /* ProgressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40C0A325E1270500D51386 /* ProgressionTests.swift */; };
 		7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */; };
 		7C3B62E125E56D51001D05B8 /* DB1.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7C3B62E025E56D51001D05B8 /* DB1.zip */; };
 		7C3B62E625E56D6C001D05B8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */; };
@@ -112,8 +113,8 @@
 		7C40C0A225E1270500D51386 /* ProgressionTests */ = {
 			isa = PBXGroup;
 			children = (
+				7C5F9DA925E6DE1D00246D55 /* TestData */,
 				7CB0AE4325E2DFC900DFDE03 /* Common */,
-				7C40C0B125E1272D00D51386 /* Resources */,
 				7C40C0A325E1270500D51386 /* ProgressionTests.swift */,
 				7C40C0A525E1270500D51386 /* Info.plist */,
 				7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */,
@@ -124,10 +125,8 @@
 		7C40C0B125E1272D00D51386 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7CB0AE5025E2E9F400DFDE03 /* MappingModels */,
+				7CB0AE5025E2E9F400DFDE03 /* DBFiles */,
 				7CB0AE1E25E2AD3D00DFDE03 /* ZippedDBs */,
-				7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */,
-				7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,6 +139,15 @@
 				7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		7C5F9DA925E6DE1D00246D55 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */,
+				7C40C0B125E1272D00D51386 /* Resources */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 		7CB0AE1E25E2AD3D00DFDE03 /* ZippedDBs */ = {
@@ -175,13 +183,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		7CB0AE5025E2E9F400DFDE03 /* MappingModels */ = {
+		7CB0AE5025E2E9F400DFDE03 /* DBFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */,
 				7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */,
 				7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */,
 			);
-			path = MappingModels;
+			path = DBFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C22CE7425E6DB9200689817 /* ProgressionTests.swift in Sources */,
 				7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */,
 				7CB0AE6625E2F83900DFDE03 /* DBVersion.swift in Sources */,
 				7C3B62FE25E5897F001D05B8 /* 1_2.xcmappingmodel in Sources */,

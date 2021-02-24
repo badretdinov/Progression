@@ -9,19 +9,19 @@ import XCTest
 import CoreData
 @testable import Progression
 
-class ProgressionTests: XCTestCase {
-    var urlsToRemove = Set<URL>()
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDownWithError() throws {
-        try self.urlsToRemove.forEach { (url) in
-            try FileManager().removeItem(at: url)
-        }
-        self.urlsToRemove.removeAll()
-    }
+//class ProgressionTests: XCTestCase {
+//    var urlsToRemove = Set<URL>()
+//
+//    override func setUpWithError() throws {
+//        // Put setup code here. This method is called before the invocation of each test method in the class.
+//    }
+//
+//    override func tearDownWithError() throws {
+//        try self.urlsToRemove.forEach { (url) in
+//            try FileManager().removeItem(at: url)
+//        }
+//        self.urlsToRemove.removeAll()
+//    }
 
 //    func testUpToDate() throws {
 //        let url = Bundle(for: self.classForCoder).url(forResource: "Model", withExtension: "momd")!
@@ -161,17 +161,17 @@ class ProgressionTests: XCTestCase {
 //
 //        print(container.persistentStoreCoordinator.persistentStores.first?.url)
 //    }
-}
-
-extension String {
-    static func random(length: Int = 20) -> String {
-        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        var randomString: String = ""
-
-        for _ in 0..<length {
-            let randomValue = arc4random_uniform(UInt32(base.count))
-            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
-        }
-        return randomString
-    }
-}
+//}
+//
+//extension String {
+//    static func random(length: Int = 20) -> String {
+//        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+//        var randomString: String = ""
+//
+//        for _ in 0..<length {
+//            let randomValue = arc4random_uniform(UInt32(base.count))
+//            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
+//        }
+//        return randomString
+//    }
+//}
