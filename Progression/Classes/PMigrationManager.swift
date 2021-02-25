@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 public class PMigrationManager<T: PDatabaseVersion> {
+    public init() {}
+    
     public func migrateStoreIfNeeded(storeURL: URL, bundle: Bundle) throws {
         try self.migrate(storeURL: storeURL, toVersion: .last, bundle: bundle)
     }
