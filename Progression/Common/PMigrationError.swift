@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 public enum PMigrationError: Error {
     case couldNotFetchMetadata(Error)
@@ -16,4 +17,6 @@ public enum PMigrationError: Error {
     case unknownDatabaseVersionFound
     case destionationVersionIsUnreachable
     case walCheckpointFailed(Error)
+    case couldNotFindMappingModel(from: NSManagedObjectModel, to: NSManagedObjectModel)
+    case couldNotMigrate(from: NSManagedObjectModel, to: NSManagedObjectModel)
 }

@@ -29,16 +29,20 @@ public class PMigrationManager<T: PDatabaseVersion> {
         
         try self.forceWALCheckpointingForStore(at: currentURL, bundle: bundle)
         for step in migrationSteps {
-            autoreleasepool {
-                let manager = NSMigrationManager(sourceModel: step.sourceModel, destinationModel: step.destinationModel)
-                let tempDir = fileManager.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-                try! fileManager.createDirectory(at: tempDir, withIntermediateDirectories: true, attributes: nil)
-                let destinationURL = tempDir.appendingPathComponent("Model.sqlite")
-                try! manager.migrateStore(from: currentURL, sourceType: NSSQLiteStoreType, options: nil, with: step.mappingModel, toDestinationURL: destinationURL, destinationType: NSSQLiteStoreType, destinationOptions: nil)
-                
-                tempDirs.insert(tempDir)
-                
-                currentURL = destinationURL
+            do {
+                try autoreleasepool {
+                    let manager = NSMigrationManager(sourceModel: step.sourceModel, destinationModel: step.destinationModel)
+                    let tempDir = fileManager.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+                    try fileManager.createDirectory(at: tempDir, withIntermediateDirectories: true, attributes: nil)
+                    let destinationURL = tempDir.appendingPathComponent("Model.sqlite")
+                    try manager.migrateStore(from: currentURL, sourceType: NSSQLiteStoreType, options: nil, with: step.mappingModel, toDestinationURL: destinationURL, destinationType: NSSQLiteStoreType, destinationOptions: nil)
+                    
+                    tempDirs.insert(tempDir)
+                    
+                    currentURL = destinationURL
+                }
+            } catch let error {
+                throw PMigrationError.couldNotMigrate(from: step.sourceModel, to: step.destinationModel)
             }
         }
         

@@ -16,7 +16,12 @@ internal class PMigrationStep<T: PDatabaseVersion> {
     init(sourceVersion: T, destinationVersion: T, bundle: Bundle) throws {
         self.sourceModel = try .managedObjectModel(forDBVersion: sourceVersion, bundle: bundle)
         self.destinationModel = try .managedObjectModel(forDBVersion: destinationVersion, bundle: bundle)
-        self.mappingModel = Self.customMappingModel(fromSourceModel: self.sourceModel, toDestinationModel: self.destinationModel, bundle: bundle)!
+        
+        guard let model = Self.customMappingModel(fromSourceModel: self.sourceModel, toDestinationModel: self.destinationModel, bundle: bundle) else {
+            throw PMigrationError.couldNotFindMappingModel(from: self.sourceModel, to: self.destinationModel)
+        }
+        
+        self.mappingModel = model
     }
 }
 
