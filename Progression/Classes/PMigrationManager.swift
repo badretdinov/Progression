@@ -17,6 +17,9 @@ public class PMigrationManager<T: PDatabaseVersion> {
     
     public func migrate(storeURL: URL, toVersion version: T, bundle: Bundle) throws {
         let fileManager = FileManager()
+        
+        guard fileManager.fileExists(atPath: storeURL.absoluteString) else { return }
+        
         var currentURL = storeURL
         
         let migrationSteps = try self.migrationSteps(storeURL: storeURL, toVersion: version, bundle: bundle)

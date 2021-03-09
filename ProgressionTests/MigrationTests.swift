@@ -35,4 +35,11 @@ class ProgressionTests: XCTestCase {
     func testMigration_3() throws {
         
     }
+    
+    func testEmptyURL() throws {
+        let dbURL = FileManager.getDocumentsDirectory().appendingPathComponent("model.sqlite")
+        
+        let migration = PMigrationManager<DBVersion>()
+        try migration.migrate(storeURL: dbURL, toVersion: .version3, bundle: Bundle(for: Self.self))
+    }
 }
