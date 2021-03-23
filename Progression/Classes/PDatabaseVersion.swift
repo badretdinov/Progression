@@ -12,6 +12,8 @@ public protocol PDatabaseVersion: CaseIterable, Equatable, RawRepresentable wher
     static var databaseName: String { get }
     static var last: Self { get }
     static func compatibleVersionForStoreMetadata(_ metadata: [String : Any], bundle: Bundle) throws -> Self?
+    
+    var migrationTypes: [PDatabaseMigrationType] { get }
 }
 
 public extension PDatabaseVersion {
@@ -30,4 +32,14 @@ public extension PDatabaseVersion {
             return Self.allCases[Self.allCases.index(Self.allCases.endIndex, offsetBy: -1)]
         }
     }
+    
+    var migrationTypes: [PDatabaseMigrationType] {
+        return [.automatic]
+    }
+}
+
+public enum PDatabaseMigrationType {
+    case automatic
+    case named(String)
+    case inferred
 }
