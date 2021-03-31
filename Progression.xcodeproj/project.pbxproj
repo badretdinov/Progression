@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C22CE7425E6DB9200689817 /* ProgressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40C0A325E1270500D51386 /* ProgressionTests.swift */; };
+		7C08F33B260BCE2F003DA841 /* 2_3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C08F33A260BCE2F003DA841 /* 2_3.xcmappingmodel */; };
+		7C1709252614D229005E2DF0 /* NamedMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1709242614D229005E2DF0 /* NamedMigrationTests.swift */; };
+		7C17092B2614D23C005E2DF0 /* InferredMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17092A2614D23C005E2DF0 /* InferredMigrationTests.swift */; };
+		7C17092F2614D249005E2DF0 /* MixedMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17092E2614D249005E2DF0 /* MixedMigrationTests.swift */; };
+		7C1709352614E791005E2DF0 /* DBVersion_Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1709342614E791005E2DF0 /* DBVersion_Named.swift */; };
+		7C1709392614E7A0005E2DF0 /* DBVersion_Inferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1709382614E7A0005E2DF0 /* DBVersion_Inferred.swift */; };
+		7C1709412614E96A005E2DF0 /* PMigrationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1709402614E96A005E2DF0 /* PMigrationManagerTests.swift */; };
+		7C1709452614EAE5005E2DF0 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1709442614EAE5005E2DF0 /* BaseTest.swift */; };
+		7C17094F2614ED1C005E2DF0 /* DBVersion_Mixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C17094E2614ED1C005E2DF0 /* DBVersion_Mixed.swift */; };
 		7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */; };
 		7C3B62E125E56D51001D05B8 /* DB1.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7C3B62E025E56D51001D05B8 /* DB1.zip */; };
-		7C3B62E625E56D6C001D05B8 /* MigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */; };
+		7C3B62E625E56D6C001D05B8 /* AutomaticMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2325E2ADA800DFDE03 /* AutomaticMigrationTests.swift */; };
 		7C3B62FE25E5897F001D05B8 /* 1_2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */; };
-		7C3B630625E58A14001D05B8 /* 2_3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */; };
 		7C40C09F25E1270500D51386 /* Progression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40C09525E1270500D51386 /* Progression.framework */; };
 		7C40C0A625E1270500D51386 /* Progression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C40C09825E1270500D51386 /* Progression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C40C0B925E127B700D51386 /* PMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40C0B825E127B700D51386 /* PMigrationManager.swift */; };
@@ -21,9 +28,9 @@
 		7CB0AE3525E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3425E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift */; };
 		7CB0AE3925E2D10B00DFDE03 /* NSManagedObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3825E2D10B00DFDE03 /* NSManagedObjectModel.swift */; };
 		7CB0AE4025E2D71900DFDE03 /* PMigrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3F25E2D71900DFDE03 /* PMigrationError.swift */; };
-		7CB0AE4525E2DFD100DFDE03 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE4425E2DFD100DFDE03 /* FileManager.swift */; };
+		7CB0AE4525E2DFD100DFDE03 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE4425E2DFD100DFDE03 /* TestHelper.swift */; };
 		7CB0AE4C25E2E47500DFDE03 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 7CB0AE4B25E2E47500DFDE03 /* Zip */; };
-		7CB0AE6625E2F83900DFDE03 /* DBVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */; };
+		7CB0AE6625E2F83900DFDE03 /* DBVersion_Automatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2F25E2B00E00DFDE03 /* DBVersion_Automatic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,27 +44,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C08F33A260BCE2F003DA841 /* 2_3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = 2_3.xcmappingmodel; sourceTree = "<group>"; };
+		7C1709242614D229005E2DF0 /* NamedMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedMigrationTests.swift; sourceTree = "<group>"; };
+		7C17092A2614D23C005E2DF0 /* InferredMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferredMigrationTests.swift; sourceTree = "<group>"; };
+		7C17092E2614D249005E2DF0 /* MixedMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedMigrationTests.swift; sourceTree = "<group>"; };
+		7C1709342614E791005E2DF0 /* DBVersion_Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVersion_Named.swift; sourceTree = "<group>"; };
+		7C1709382614E7A0005E2DF0 /* DBVersion_Inferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVersion_Inferred.swift; sourceTree = "<group>"; };
+		7C1709402614E96A005E2DF0 /* PMigrationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationManagerTests.swift; sourceTree = "<group>"; };
+		7C1709442614EAE5005E2DF0 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		7C17094E2614ED1C005E2DF0 /* DBVersion_Mixed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVersion_Mixed.swift; sourceTree = "<group>"; };
 		7C3B62CF25E56117001D05B8 /* MM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MM.xcdatamodel; sourceTree = "<group>"; };
 		7C3B62E025E56D51001D05B8 /* DB1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DB1.zip; sourceTree = "<group>"; };
 		7C3B62E925E56DAE001D05B8 /* MM2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MM2.xcdatamodel; sourceTree = "<group>"; };
 		7C3B62F225E58100001D05B8 /* MM3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MM3.xcdatamodel; sourceTree = "<group>"; };
 		7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = 1_2.xcmappingmodel; sourceTree = "<group>"; };
-		7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = 2_3.xcmappingmodel; sourceTree = "<group>"; };
 		7C40C09525E1270500D51386 /* Progression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Progression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40C09825E1270500D51386 /* Progression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Progression.h; sourceTree = "<group>"; };
 		7C40C09925E1270500D51386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C40C09E25E1270500D51386 /* ProgressionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C40C0A325E1270500D51386 /* ProgressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionTests.swift; sourceTree = "<group>"; };
 		7C40C0A525E1270500D51386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C40C0B825E127B700D51386 /* PMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationManager.swift; sourceTree = "<group>"; };
-		7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTests.swift; sourceTree = "<group>"; };
+		7CB0AE2325E2ADA800DFDE03 /* AutomaticMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticMigrationTests.swift; sourceTree = "<group>"; };
 		7CB0AE2725E2AEF700DFDE03 /* PMigrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationStep.swift; sourceTree = "<group>"; };
 		7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDatabaseVersion.swift; sourceTree = "<group>"; };
-		7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVersion.swift; sourceTree = "<group>"; };
+		7CB0AE2F25E2B00E00DFDE03 /* DBVersion_Automatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVersion_Automatic.swift; sourceTree = "<group>"; };
 		7CB0AE3425E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentStoreCoordinator.swift; sourceTree = "<group>"; };
 		7CB0AE3825E2D10B00DFDE03 /* NSManagedObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectModel.swift; sourceTree = "<group>"; };
 		7CB0AE3F25E2D71900DFDE03 /* PMigrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationError.swift; sourceTree = "<group>"; };
-		7CB0AE4425E2DFD100DFDE03 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		7CB0AE4425E2DFD100DFDE03 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +129,13 @@
 			children = (
 				7C5F9DA925E6DE1D00246D55 /* TestData */,
 				7CB0AE4325E2DFC900DFDE03 /* Common */,
-				7C40C0A325E1270500D51386 /* ProgressionTests.swift */,
 				7C40C0A525E1270500D51386 /* Info.plist */,
-				7CB0AE2325E2ADA800DFDE03 /* MigrationTests.swift */,
+				7C1709442614EAE5005E2DF0 /* BaseTest.swift */,
+				7CB0AE2325E2ADA800DFDE03 /* AutomaticMigrationTests.swift */,
+				7C1709242614D229005E2DF0 /* NamedMigrationTests.swift */,
+				7C17092A2614D23C005E2DF0 /* InferredMigrationTests.swift */,
+				7C17092E2614D249005E2DF0 /* MixedMigrationTests.swift */,
+				7C1709402614E96A005E2DF0 /* PMigrationManagerTests.swift */,
 			);
 			path = ProgressionTests;
 			sourceTree = "<group>";
@@ -144,7 +162,10 @@
 		7C5F9DA925E6DE1D00246D55 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
-				7CB0AE2F25E2B00E00DFDE03 /* DBVersion.swift */,
+				7CB0AE2F25E2B00E00DFDE03 /* DBVersion_Automatic.swift */,
+				7C1709342614E791005E2DF0 /* DBVersion_Named.swift */,
+				7C1709382614E7A0005E2DF0 /* DBVersion_Inferred.swift */,
+				7C17094E2614ED1C005E2DF0 /* DBVersion_Mixed.swift */,
 				7C40C0B125E1272D00D51386 /* Resources */,
 			);
 			path = TestData;
@@ -178,7 +199,7 @@
 		7CB0AE4325E2DFC900DFDE03 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7CB0AE4425E2DFD100DFDE03 /* FileManager.swift */,
+				7CB0AE4425E2DFD100DFDE03 /* TestHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -188,7 +209,7 @@
 			children = (
 				7C3B62CE25E56117001D05B8 /* Model.xcdatamodeld */,
 				7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */,
-				7C3B630525E58A14001D05B8 /* 2_3.xcmappingmodel */,
+				7C08F33A260BCE2F003DA841 /* 2_3.xcmappingmodel */,
 			);
 			path = DBFiles;
 			sourceTree = "<group>";
@@ -323,13 +344,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C22CE7425E6DB9200689817 /* ProgressionTests.swift in Sources */,
+				7C1709252614D229005E2DF0 /* NamedMigrationTests.swift in Sources */,
 				7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */,
-				7CB0AE6625E2F83900DFDE03 /* DBVersion.swift in Sources */,
+				7CB0AE6625E2F83900DFDE03 /* DBVersion_Automatic.swift in Sources */,
 				7C3B62FE25E5897F001D05B8 /* 1_2.xcmappingmodel in Sources */,
-				7C3B62E625E56D6C001D05B8 /* MigrationTests.swift in Sources */,
-				7C3B630625E58A14001D05B8 /* 2_3.xcmappingmodel in Sources */,
-				7CB0AE4525E2DFD100DFDE03 /* FileManager.swift in Sources */,
+				7C1709392614E7A0005E2DF0 /* DBVersion_Inferred.swift in Sources */,
+				7C3B62E625E56D6C001D05B8 /* AutomaticMigrationTests.swift in Sources */,
+				7C17094F2614ED1C005E2DF0 /* DBVersion_Mixed.swift in Sources */,
+				7C17092B2614D23C005E2DF0 /* InferredMigrationTests.swift in Sources */,
+				7C08F33B260BCE2F003DA841 /* 2_3.xcmappingmodel in Sources */,
+				7C17092F2614D249005E2DF0 /* MixedMigrationTests.swift in Sources */,
+				7C1709352614E791005E2DF0 /* DBVersion_Named.swift in Sources */,
+				7C1709412614E96A005E2DF0 /* PMigrationManagerTests.swift in Sources */,
+				7C1709452614EAE5005E2DF0 /* BaseTest.swift in Sources */,
+				7CB0AE4525E2DFD100DFDE03 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
