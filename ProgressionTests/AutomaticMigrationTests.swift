@@ -11,7 +11,7 @@ import CoreData
 
 class AutomaticMigrationTests: BaseTest {
     func testSingle() throws {
-        try TestHelper.deployDB(version: 1, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
 
         let migration = PMigrationManager<DBVersion_Automatic>()
         try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version2, bundle: Bundle(for: Self.self))
@@ -30,7 +30,7 @@ class AutomaticMigrationTests: BaseTest {
     }
     
     func testMultiple() throws {
-        try TestHelper.deployDB(version: 1, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
         
         let migration = PMigrationManager<DBVersion_Automatic>()
         try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle(for: Self.self))

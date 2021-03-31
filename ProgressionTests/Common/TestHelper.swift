@@ -9,6 +9,13 @@ import Foundation
 import Zip
 import CoreData
 
+enum TestDBVersion: String {
+    case normal = "DB_normal"
+    case wrong = "DB_wrong"
+    case nondb = "DB_nondb"
+    case latest = "DB_latest"
+}
+
 class TestHelper {
     static func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -20,8 +27,8 @@ class TestHelper {
         self.getDocumentsDirectory().appendingPathComponent("Model.sqlite")
     }
     
-    static func deployDB(version: Int, bundle: Bundle) throws {
-        let modelZip = bundle.url(forResource: "DB\(version)", withExtension: "zip")!
+    static func deployDB(version: TestDBVersion, bundle: Bundle) throws {
+        let modelZip = bundle.url(forResource: version.rawValue, withExtension: "zip")!
         print(self.getDocumentsDirectory())
         try Zip.unzipFile(modelZip, destination: self.getDocumentsDirectory(), overwrite: true, password: nil)
     }

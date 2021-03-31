@@ -10,7 +10,6 @@ import CoreData
 
 public enum PMigrationError: Error {
     case couldNotFetchMetadata(Error)
-    case couldNotAddPersistentStore(Error)
     case couldNotReplaceStore(Error)
     case couldNotFindDatabase
     case couldNotFindDatabaseVersion

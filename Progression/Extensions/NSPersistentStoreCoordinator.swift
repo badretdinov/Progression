@@ -16,14 +16,6 @@ internal extension NSPersistentStoreCoordinator {
         }
     }
     
-    func addPersistentStore(at storeURL: URL, options: [AnyHashable : Any]) throws -> NSPersistentStore {
-        do {
-            return try addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: options)
-        } catch let error {
-            throw PMigrationError.couldNotAddPersistentStore(error)
-        }
-    }
-    
     static func replaceStore(at targetURL: URL, withStoreAt sourceURL: URL) throws {
         do {
             let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: NSManagedObjectModel())

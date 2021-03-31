@@ -107,7 +107,7 @@ private extension PMigrationManager {
         
         do {
             let options = [NSSQLitePragmasOption: ["journal_mode": "DELETE"], NSMigratePersistentStoresAutomaticallyOption : false, NSInferMappingModelAutomaticallyOption : false] as [String : Any]
-            let store = try persistentStoreCoordinator.addPersistentStore(at: storeURL, options: options)
+            let store = try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: options)
             try persistentStoreCoordinator.remove(store)
         } catch let error {
             throw PMigrationError.walCheckpointFailed(error)
