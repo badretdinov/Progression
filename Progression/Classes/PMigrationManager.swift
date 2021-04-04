@@ -42,7 +42,7 @@ public class PMigrationManager<T: PDatabaseVersion> {
                     currentURL = destinationURL
                 }
             } catch let error {
-                throw PMigrationError.couldNotMigrate(from: step.sourceModel, to: step.destinationModel)
+                throw PMigrationError.couldNotMigrate(from: step.sourceModel, to: step.destinationModel, error: error)
             }
         }
         

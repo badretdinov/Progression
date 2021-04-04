@@ -17,5 +17,5 @@ public enum PMigrationError: Error {
     case destionationVersionIsUnreachable
     case walCheckpointFailed(Error)
     case couldNotFindMappingModel(from: NSManagedObjectModel, to: NSManagedObjectModel)
-    case couldNotMigrate(from: NSManagedObjectModel, to: NSManagedObjectModel)
+    case couldNotMigrate(from: NSManagedObjectModel, to: NSManagedObjectModel, error: Error)
 }
