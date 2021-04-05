@@ -28,8 +28,8 @@ class TestHelper {
     }
     
     static func deployDB(version: TestDBVersion, bundle: Bundle) throws {
+        print(bundle.bundlePath)
         let modelZip = bundle.url(forResource: version.rawValue, withExtension: "zip")!
-        print(self.getDocumentsDirectory())
         try Zip.unzipFile(modelZip, destination: self.getDocumentsDirectory(), overwrite: true, password: nil)
     }
     

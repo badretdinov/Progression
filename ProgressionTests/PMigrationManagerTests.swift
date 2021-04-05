@@ -14,23 +14,23 @@ class PMigrationManagerTests: BaseTest {
         let dbURL = TestHelper.getDocumentsDirectory().appendingPathComponent("model123.sqlite")
 
         let migration = PMigrationManager<DBVersion_Automatic>()
-        try migration.migrate(storeURL: dbURL, toVersion: .version3, bundle: Bundle(for: Self.self))
+        try migration.migrate(storeURL: dbURL, toVersion: .version3, bundle: Bundle.module)
     }
 
     func testUpToDateDBMigration() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
 
         let migration = PMigrationManager<DBVersion_Automatic>()
-        try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self))
+        try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module)
 
-        try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self))
+        try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module)
     }
 
     func testErrorUnknownVersion() throws {
-        try TestHelper.deployDB(version: .wrong, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .wrong, bundle: Bundle.module)
 
         let migration = PMigrationManager<DBVersion_Automatic>()
-        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self)), "") { (error) in
+        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module), "") { (error) in
             var passed = false
             if case .unknownDatabaseVersionFound = error as? PMigrationError {
                 passed = true
@@ -40,10 +40,10 @@ class PMigrationManagerTests: BaseTest {
     }
     
     func testErrorMetadataFetch() throws {
-        try TestHelper.deployDB(version: .nondb, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .nondb, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_Automatic>()
-        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self)), "") { (error) in
+        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module), "") { (error) in
             var passed = false
             if case .couldNotFetchMetadata(_) = error as? PMigrationError {
                 passed = true
@@ -53,10 +53,10 @@ class PMigrationManagerTests: BaseTest {
     }
     
     func testErrorWrongName() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_wrongName>()
-        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self)), "") { (error) in
+        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module), "") { (error) in
             var passed = false
             if case .couldNotFindDatabase = error as? PMigrationError {
                 passed = true
@@ -66,10 +66,10 @@ class PMigrationManagerTests: BaseTest {
     }
     
     func testErrorWrongVersion() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_wrongVersion>()
-        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self)), "") { (error) in
+        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module), "") { (error) in
             var passed = false
             if case .couldNotFindDatabaseVersion = error as? PMigrationError {
                 passed = true
@@ -79,10 +79,10 @@ class PMigrationManagerTests: BaseTest {
     }
     
     func testErrorUnreachableVersion() throws {
-        try TestHelper.deployDB(version: .latest, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .latest, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_Automatic>()
-        XCTAssertThrowsError(try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version1, bundle: Bundle(for: Self.self)), "") { (error) in
+        XCTAssertThrowsError(try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version1, bundle: Bundle.module), "") { (error) in
             var passed = false
             if case .destionationVersionIsUnreachable = error as? PMigrationError {
                 passed = true
@@ -92,10 +92,10 @@ class PMigrationManagerTests: BaseTest {
     }
     
     func testErrorNoMappingModel() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_wrongNamed>()
-        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle(for: Self.self)), "") { (error) in
+        XCTAssertThrowsError(try migration.migrateStoreIfNeeded(storeURL: TestHelper.databaseUrl(), bundle: Bundle.module), "") { (error) in
             var passed = false
             if case .couldNotFindMappingModel(from: _, to: _) = error as? PMigrationError {
                 passed = true

@@ -11,12 +11,12 @@ import CoreData
 
 class MixedMigrationTests: BaseTest {
     func testMultiple1() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_Mixed1>()
-        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle(for: Self.self))
+        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle.module)
         
-        let modelURL = Bundle(for: self.classForCoder).url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM3.mom")
+        let modelURL = Bundle.module.url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM3.mom")
         context = try TestHelper.mainContext(modelUrl: modelURL)
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FirstE")
@@ -32,12 +32,12 @@ class MixedMigrationTests: BaseTest {
     }
     
     func testMultiple2() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_Mixed2>()
-        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle(for: Self.self))
+        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle.module)
         
-        let modelURL = Bundle(for: self.classForCoder).url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM3.mom")
+        let modelURL = Bundle.module.url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM3.mom")
         context = try TestHelper.mainContext(modelUrl: modelURL)
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FirstE")

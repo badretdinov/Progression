@@ -29,6 +29,7 @@
 		7C40C09F25E1270500D51386 /* Progression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40C09525E1270500D51386 /* Progression.framework */; };
 		7C40C0A625E1270500D51386 /* Progression.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C40C09825E1270500D51386 /* Progression.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C40C0B925E127B700D51386 /* PMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40C0B825E127B700D51386 /* PMigrationManager.swift */; };
+		7C7AD33B261A50A800388A52 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7AD33A261A50A800388A52 /* Bundle.swift */; };
 		7CB0AE2825E2AEF700DFDE03 /* PMigrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2725E2AEF700DFDE03 /* PMigrationStep.swift */; };
 		7CB0AE2C25E2AF0C00DFDE03 /* PDatabaseVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */; };
 		7CB0AE3525E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0AE3425E2B58D00DFDE03 /* NSPersistentStoreCoordinator.swift */; };
@@ -72,10 +73,11 @@
 		7C3B62FD25E5897F001D05B8 /* 1_2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = 1_2.xcmappingmodel; sourceTree = "<group>"; };
 		7C40C09525E1270500D51386 /* Progression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Progression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40C09825E1270500D51386 /* Progression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Progression.h; sourceTree = "<group>"; };
-		7C40C09925E1270500D51386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C40C09925E1270500D51386 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		7C40C09E25E1270500D51386 /* ProgressionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40C0A525E1270500D51386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C40C0B825E127B700D51386 /* PMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationManager.swift; sourceTree = "<group>"; };
+		7C7AD33A261A50A800388A52 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		7CB0AE2325E2ADA800DFDE03 /* AutomaticMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticMigrationTests.swift; sourceTree = "<group>"; };
 		7CB0AE2725E2AEF700DFDE03 /* PMigrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMigrationStep.swift; sourceTree = "<group>"; };
 		7CB0AE2B25E2AF0C00DFDE03 /* PDatabaseVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDatabaseVersion.swift; sourceTree = "<group>"; };
@@ -109,7 +111,9 @@
 		7C40C08B25E1270500D51386 = {
 			isa = PBXGroup;
 			children = (
+				7CB6CB0C261A3D8200E3A257 /* Plists */,
 				7C40C09725E1270500D51386 /* Progression */,
+				7C7AD33E261A51C100388A52 /* BundleFix */,
 				7C40C0A225E1270500D51386 /* ProgressionTests */,
 				7C40C09625E1270500D51386 /* Products */,
 			);
@@ -131,7 +135,6 @@
 				7CB0AE3325E2B57F00DFDE03 /* Extensions */,
 				7C40C0B725E127A100D51386 /* Classes */,
 				7C40C09825E1270500D51386 /* Progression.h */,
-				7C40C09925E1270500D51386 /* Info.plist */,
 			);
 			path = Progression;
 			sourceTree = "<group>";
@@ -141,7 +144,6 @@
 			children = (
 				7C5F9DA925E6DE1D00246D55 /* TestData */,
 				7CB0AE4325E2DFC900DFDE03 /* Common */,
-				7C40C0A525E1270500D51386 /* Info.plist */,
 				7C1709442614EAE5005E2DF0 /* BaseTest.swift */,
 				7CB0AE2325E2ADA800DFDE03 /* AutomaticMigrationTests.swift */,
 				7C1709242614D229005E2DF0 /* NamedMigrationTests.swift */,
@@ -184,6 +186,14 @@
 				7C40C0B125E1272D00D51386 /* Resources */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		7C7AD33E261A51C100388A52 /* BundleFix */ = {
+			isa = PBXGroup;
+			children = (
+				7C7AD33A261A50A800388A52 /* Bundle.swift */,
+			);
+			path = BundleFix;
 			sourceTree = "<group>";
 		};
 		7CB0AE1E25E2AD3D00DFDE03 /* ZippedDBs */ = {
@@ -230,6 +240,15 @@
 				7C08F33A260BCE2F003DA841 /* 2_3.xcmappingmodel */,
 			);
 			path = DBFiles;
+			sourceTree = "<group>";
+		};
+		7CB6CB0C261A3D8200E3A257 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				7C40C0A525E1270500D51386 /* Info.plist */,
+				7C40C09925E1270500D51386 /* Tests-Info.plist */,
+			);
+			path = Plists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C1709252614D229005E2DF0 /* NamedMigrationTests.swift in Sources */,
+				7C7AD33B261A50A800388A52 /* Bundle.swift in Sources */,
 				7C3B62D025E56117001D05B8 /* Model.xcdatamodeld in Sources */,
 				7CB0AE6625E2F83900DFDE03 /* DBVersion_Automatic.swift in Sources */,
 				7C3B62FE25E5897F001D05B8 /* 1_2.xcmappingmodel in Sources */,
@@ -448,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -506,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,7 +547,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Progression/Info.plist;
+				INFOPLIST_FILE = Plists/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,7 +573,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Progression/Info.plist;
+				INFOPLIST_FILE = Plists/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,7 +595,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ProgressionTests/Info.plist;
+				INFOPLIST_FILE = "Plists/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +615,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ProgressionTests/Info.plist;
+				INFOPLIST_FILE = "Plists/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

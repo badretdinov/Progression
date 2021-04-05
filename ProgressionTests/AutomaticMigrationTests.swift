@@ -11,12 +11,12 @@ import CoreData
 
 class AutomaticMigrationTests: BaseTest {
     func testSingle() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
 
         let migration = PMigrationManager<DBVersion_Automatic>()
-        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version2, bundle: Bundle(for: Self.self))
+        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version2, bundle: Bundle.module)
         
-        let modelURL = Bundle(for: self.classForCoder).url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM2.mom")
+        let modelURL = Bundle.module.url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM2.mom")
         context = try TestHelper.mainContext(modelUrl: modelURL)
 
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FirstE")
@@ -30,12 +30,12 @@ class AutomaticMigrationTests: BaseTest {
     }
     
     func testMultiple() throws {
-        try TestHelper.deployDB(version: .normal, bundle: Bundle(for: Self.self))
+        try TestHelper.deployDB(version: .normal, bundle: Bundle.module)
         
         let migration = PMigrationManager<DBVersion_Automatic>()
-        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle(for: Self.self))
+        try migration.migrate(storeURL: TestHelper.databaseUrl(), toVersion: .version3, bundle: Bundle.module)
         
-        let modelURL = Bundle(for: self.classForCoder).url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM3.mom")
+        let modelURL = Bundle.module.url(forResource: "Model", withExtension: "momd")!.appendingPathComponent("MM3.mom")
         context = try TestHelper.mainContext(modelUrl: modelURL)
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FirstE")
