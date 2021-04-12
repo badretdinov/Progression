@@ -5,6 +5,7 @@ Pod::Spec.new do |s|
     s.authors  = { 'Oleg Badretdinov' => 'badretdinov@me.com' }
     s.source   = { :git => 'https://github.com/badretdinov/Progression.git', :tag => s.version }
     s.summary  = 'TODO'
+    s.license = 'MIT'
     s.ios.deployment_target     = '10.0'
     s.osx.deployment_target     = '10.12'
     s.tvos.deployment_target    = '10.0'
