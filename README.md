@@ -2,7 +2,7 @@
 
 ## Progression
 
-Progression is the framework which helps you to automate migration process. It based on progressive migration approach.
+Progression is the core data framework which helps you to automate CoreData migration process. It based on progressive migration approach.
 
 - [Progressive migration](#progressive-migration)
 	- [Problem](#problem)
